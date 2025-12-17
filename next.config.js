@@ -1,15 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-
-  images: {
-    remotePatterns: [
+  async headers() {
+    return [
       {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        pathname: "/**",
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "ALLOWALL",
+          },
+          {
+            key: "Content-Security-Policy",
+            value:
+              "frame-ancestors 'self' https://*.sanity.io https://*.vercel.app;",
+          },
+        ],
       },
-    ],
+    ];
   },
 };
 
