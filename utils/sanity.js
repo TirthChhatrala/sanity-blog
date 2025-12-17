@@ -5,14 +5,14 @@ import imageUrlBuilder from "@sanity/image-url";
    SANITY CLIENT
 ========================= */
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "mfzmst1y",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2024-01-01",
 
   // REQUIRED for Preview / Presentation
   useCdn: false,
 
-  token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
+  token: process.env.NEXT_PUBLIC_SANITY_TOKEN || "skrdqTGQilE8JdyHHuis979uKOSAzEdkblSPFnHuxqIdeG4r5Ig3wzQ19RdWK14zHV3i1lFcaHqJuuHrSYAi5qLd9eZukBMOLHHtkPSLfJExZI9DA383QST3NqqWfxR17VoBSQ9qT4e67SYunVn3Yr9pnbVbJPkZVi8xoqxUlRNPk0xk2DQW",
 });
 
 /* =========================
