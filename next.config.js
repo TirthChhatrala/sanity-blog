@@ -5,14 +5,10 @@ const nextConfig = {
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "X-Frame-Options",
-            value: "ALLOWALL",
-          },
-          {
+           {
             key: "Content-Security-Policy",
             value:
-              "frame-ancestors 'self' https://*.sanity.io https://*.vercel.app;",
+              "frame-ancestors 'self' https://*.sanity.io https://studio.sanity.io https://*.vercel.app;",
           },
         ],
       },
