@@ -5,11 +5,6 @@ const nextConfig = {
       {
         source: "/(.*)",
         headers: [
-          // 🔥 REMOVE any X-Frame-Options
-          {
-            key: "X-Frame-Options",
-            value: "",
-          },
           {
             key: "Content-Security-Policy",
             value:

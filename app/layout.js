@@ -3,6 +3,7 @@ import { draftMode } from "next/headers";
 import "./globals.css";
 import Navbar from "./navbar/Navbar";
 // import PreviewToggle from "@/components/PreviewToggle";
+import { VisualEditing } from "@sanity/visual-editing/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Preview Toggle Button */}
         {/* <PreviewToggle enabled={isEnabled} /> */}
+        < VisualEditing />
       </body>
     </html>
   );
